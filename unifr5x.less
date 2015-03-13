@@ -5,6 +5,9 @@
 
 @mainmenu-color: #E1E2DD;
 @unifr-blue: #014999;
+@background-gray: #f0f0f0;
+@navbar-gray: #E1E2DD;
+@topbarnav-lightblue: rgba(86, 129, 184, 0.6);
 
 #overallContainer {
   overflow: hidden;
@@ -89,7 +92,7 @@ body.std {
   overflow: hidden;
   position:absolute;
   min-width: calc(~'100% - 66px');
-  background-color: #f0f0f0;
+  background-color: @background-gray;
 }
 
 .ilTopTitle {
@@ -119,7 +122,7 @@ footer.ilFooter {
 }
 
 #ilTopNav.navbar-default {
-  background-color: #E1E2DD;
+  background-color: @navbar-gray;
   left: 1px;
   margin-left: 0;
   padding-left: 0;
@@ -143,7 +146,7 @@ footer.ilFooter {
 }
 
 #ilTopBarNav > li > a {
-  background-color: rgba(86, 129, 184, 0.6);
+  background-color: @topbarnav-lightblue;
 }
 
 .ilContainerWidth {
