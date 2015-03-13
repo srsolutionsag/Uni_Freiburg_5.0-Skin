@@ -11318,7 +11318,7 @@ footer.ilFooter {
   padding-top: 25px;
 }
 #mainspacekeeper {
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 a.ilTreeView {
   width: 0px;
