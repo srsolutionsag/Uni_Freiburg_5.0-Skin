@@ -11212,9 +11212,8 @@ body.std {
   #leftBanner {
     background-color: #fff;
     height: 200px;
-    /*background-image: url(images/unilogo-200x66.gif);
-  	background-repeat: no-repeat;*/
-  
+    background-image: url(images/unilogo-200x66.gif);
+    background-repeat: no-repeat;
     width: 66px;
     z-index: 10;
   }
