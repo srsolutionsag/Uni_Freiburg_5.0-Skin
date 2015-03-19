@@ -11201,20 +11201,22 @@ table.mceToolbar td {
  Colors: http://www.zuv.uni-freiburg.de/service/wsg/webstyleguide/farben
 */
 #overallContainer {
-  overflow: hidden;
-  min-height: 100%;
+  /*overflow: hidden;
+  min-height: 100%;*/
+
 }
 body.std {
   background-color: #ffffff;
 }
 @media screen and (min-width: 767px) {
   #leftBanner {
-    background-color: #ffffff;
-    background-image: url(images/unilogo-200x66.gif);
-    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 200px;
+    /*background-image: url(images/unilogo-200x66.gif);
+  	background-repeat: no-repeat;*/
+  
     width: 66px;
-    margin-bottom: -15000px;
-    padding-bottom: 15000px;
+    z-index: 10;
   }
 }
 #ilTopNav button.navbar-toggle {
@@ -11307,13 +11309,14 @@ body.std {
   z-index: 1;
 }
 #ilAll {
-  overflow: hidden;
+  /*overflow: hidden;*/
+
   position: absolute;
   background-color: #f2f3f1;
 }
 @media screen and (min-width: 767px) {
   #ilAll {
-    min-width: calc(100% - 66px);
+    min-width: calc(100% - 70px);
   }
 }
 @media screen and (max-width: 767px) {
@@ -11339,7 +11342,6 @@ footer.ilFooter {
   background-color: #004a99;
   height: 30px;
   padding: 2px 0 0 15px;
-  font-family: "arial";
 }
 #ilTopNav {
   margin: -38px 0 0 2px;
@@ -11380,6 +11382,7 @@ footer.ilFooter {
 #mainspacekeeper {
   margin: 0 0 20px 0;
 }
+/* Tree Icon */
 a.ilTreeView {
   width: 0px;
   box-shadow: none;
@@ -11387,17 +11390,32 @@ a.ilTreeView {
 }
 a.ilTreeView > img {
   background-color: #e0e1dd;
-}
-.ilLeftNav {
-  margin-left: 0;
-  top: 24px;
-  position: absolute;
-  z-index: 0;
-  margin-bottom: -15000px;
+  height: 27px;
 }
 a#imgtree {
   position: absolute;
-  top: 212px;
+  top: 93px;
+  left: -10px;
+  clip: rect(0px 28px 28px 10px);
+}
+a#imgtree:hover,
+a#imgtree:active,
+a#imgtree:focus {
+  position: absolute;
+  top: 93px;
+  left: 0px;
+  clip: rect(0px 28px 28px 0px);
+}
+.ilLeftNav {
+  position: absolute;
+  margin-left: -2px;
+  top: 24px;
+  z-index: 0;
+  background-color: #f2f3f1;
+  border-right: 1px solid #808080;
+}
+#treeViewContainer {
+  background-color: #f2f3f1;
 }
 #ilAdvSelListAnchorText_socialbm_actions {
   display: none;
@@ -11438,21 +11456,6 @@ ol.breadcrumb {
 /* Links */
 a {
   color: #2a6ebb;
-}
-/* Tree Icon */
-a#imgtree {
-  position: absolute;
-  top: 93px;
-  left: -10px;
-}
-a.ilTreeView > img {
-  height: 27px;
-}
-a.ilTreeView:hover > img,
-a.ilTreeView:active > img,
-a.ilTreeView:focus > img {
-  margin-left: 8px;
-  left: 0px;
 }
 /* margin Left, right */
 .row {

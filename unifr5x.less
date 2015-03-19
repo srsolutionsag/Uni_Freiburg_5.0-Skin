@@ -18,8 +18,8 @@
 @button_green: #739600; //Mittel-Grün
 
 #overallContainer {
-  overflow: hidden;
-  min-height: 100%;
+  /*overflow: hidden;
+  min-height: 100%;*/
 }
 
 body.std {
@@ -28,12 +28,12 @@ body.std {
 
 @media screen and (min-width: 767px) {
   #leftBanner {
-	background-color: #ffffff;
-	background-image: url(images/unilogo-200x66.gif);
-	background-repeat: no-repeat;
+	background-color: #fff;
+	height: 200px;
+	/*background-image: url(images/unilogo-200x66.gif);
+	background-repeat: no-repeat;*/
 	width: 66px;
-	margin-bottom: -15000px;
-	padding-bottom: 15000px;
+	z-index: 10;
   }
 }
 
@@ -137,14 +137,15 @@ body.std {
 }
 
 #ilAll {
-  overflow: hidden;
+  /*overflow: hidden;*/
   position:absolute;
   background-color: @background_grey;
 }
 
+
 @media screen and (min-width: 767px) {
   #ilAll {
-	min-width: calc(~'100% - 66px');
+	min-width: calc(~'100% - 70px');
   }
 }
 
@@ -174,8 +175,8 @@ body.std {
 footer.ilFooter {
   background-color: @unifr_blue;
   height: 30px;
+  height: 30px;
   padding: 2px 0 0 15px;
-  font-family: "arial";
 }
 
 #ilTopNav {
@@ -227,28 +228,48 @@ footer.ilFooter {
   margin: 0 0 20px 0;
 }
 
+/* Tree Icon */
 a.ilTreeView {
   width: 0px;
   box-shadow: none;
   border: none;
 }
 
+
 a.ilTreeView > img {
   background-color: @navbar_background_grey;
-}
-
-.ilLeftNav {
-  margin-left: 0;
-  top: 24px;
-  position: absolute;
-  z-index: 0;
-  margin-bottom: -15000px;
+  height: 27px;
 }
 
 a#imgtree {
   position: absolute;
-  top: 212px;
+  top: 93px;
+  left: -10px;
+  clip: rect(0px 28px  28px  10px );
 }
+
+a#imgtree:hover, a#imgtree:active, a#imgtree:focus {
+  position: absolute;
+  top: 93px;
+  left: 0px;
+  clip: rect(0px 28px  28px  0px );
+}
+
+
+
+.ilLeftNav {
+  position: absolute;
+  margin-left: -2px;
+  top: 24px;
+  z-index: 0;
+  background-color: @background_grey;
+  border-right: 1px solid #808080;
+}
+
+#treeViewContainer {
+  background-color: @background_grey;
+}
+
 
 #ilAdvSelListAnchorText_socialbm_actions {
   display:none;
@@ -298,21 +319,6 @@ a {
   color: @link_font;
 }
 
-/* Tree Icon */
-a#imgtree {
-  position: absolute;
-  top: 93px;
-  left: -10px;
-}
-
-a.ilTreeView > img {
-  height: 27px;
-}
-
-a.ilTreeView:hover > img, a.ilTreeView:active > img, a.ilTreeView:focus > img {
-  margin-left: 8px;
-  left: 0px;
-}
 
 /* margin Left, right */
 .row {
