@@ -9536,10 +9536,11 @@ span.bibl_text_inline_Emph {
 .ilPlayerPreviewDescription {
   padding: 7px;
   font-size: 85%;
-  position: relative;
+  position: absolute;
+  width: 306px;
   color: #F0F0F0;
-  top: -240px;
-  background: url("images/black60.png");
+  margin-top: -240px;
+  background: url("images//black60.png");
 }
 .ilPlayerPreviewOverlay img {
   cursor: pointer;
@@ -9747,6 +9748,7 @@ div.ilPreconditionItem {
 div.ilContainerListItemOuter {
   padding: 15px 10px;
   zoom: 1;
+  width: 100%;
   /* background-color: lighten(@mid-gray, 75%); */
 
 }
@@ -10918,7 +10920,7 @@ table.mceToolbar td {
    Google recommending 640px: https://developers.google.com/webmasters/smartphone-sites/details
    
    */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   html {
     -webkit-text-size-adjust: none;
   }
@@ -11195,48 +11197,93 @@ table.mceToolbar td {
 /* @nav-tabs-link-hover-border-color: @brand-primary; */
 /* ILIAS variables candidates */
 /* Uni Freiburg 5.x ILIAS Skin */
+/**
+ Colors: http://www.zuv.uni-freiburg.de/service/wsg/webstyleguide/farben
+*/
 #overallContainer {
   overflow: hidden;
   min-height: 100%;
 }
 body.std {
-  background-color: #FFFFFF;
-}
-#leftBanner {
   background-color: #ffffff;
-  background-image: url(images/unilogo-200x66.gif);
-  background-repeat: no-repeat;
-  width: 66px;
-  margin-bottom: -15000px;
-  padding-bottom: 15000px;
+}
+@media screen and (min-width: 767px) {
+  #leftBanner {
+    background-color: #ffffff;
+    background-image: url(images/unilogo-200x66.gif);
+    background-repeat: no-repeat;
+    width: 66px;
+    margin-bottom: -15000px;
+    padding-bottom: 15000px;
+  }
+}
+#ilTopNav button.navbar-toggle {
+  left: 18px;
+  top: -74px;
+  background-color: #2a6ebb;
+  position: absolute;
 }
 #ilTopBar.ilTopBar {
   position: static;
-  background-color: #014999;
+  background-color: #004a99;
   height: 88px;
   z-index: 2;
+}
+#ilTopBarNav {
+  margin: 20px 14px 0 0;
 }
 #ilTopNav.navbar {
   min-height: 27px;
 }
+#ilTopNav .navbar-nav {
+  padding-left: 0px !important;
+}
 #ilTopBarNav .dropdown-menu a {
-  color: #2C2828;
+  color: #363534;
 }
 #ilTopBarNav .dropdown-menu a:hover {
-  background-color: #AEAEAE;
-  color: #F9F9F9;
+  background-color: #2a6ebb;
+  color: #363534;
 }
 #ilTopBarNav .dropdown-menu {
-  background-color: #F9F9F9;
+  background-color: #e0e1dd;
 }
 #ilTopBarNav .dropdown-menu #ilMMSearchMenu a {
-  color: #2C2828;
+  color: #363534;
+}
+.dropdown-menu {
+  background-color: #e0e1dd;
+}
+.dropdown-header {
+  font-size: 14px;
+  background-color: #e0e1dd;
+  font-weight: bold;
+}
+#ilTopNav .navbar-nav > .active > a,
+#ilTopNav .navbar-nav > .open > a,
+#ilTopNav .navbar-nav > .active > a:hover,
+#ilTopNav .navbar-nav > .open > a:hover,
+#ilTopNav .navbar-nav > .active > a:active,
+#ilTopNav .navbar-nav > .open > a:active,
+#ilTopNav .navbar-nav > .active > a:focus,
+#ilTopNav .navbar-nav > .open > a:focus {
+  background-color: #e0e1dd;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus {
+  background-color: #2a6ebb;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: #2a6ebb;
+  color: #ffffff;
 }
 #ilMMSearchMenu p {
-  color: #2C2828;
+  color: #363534;
 }
 #ilTopNav .navbar-nav {
-  padding-left: 15px;
+  padding-left: 18px;
   margin: 2px 5px 0 0;
   font-family: "arial";
   font-size: 12;
@@ -11262,24 +11309,34 @@ body.std {
 #ilAll {
   overflow: hidden;
   position: absolute;
-  min-width: calc(100% - 66px);
-  background-color: #f0f0f0;
+  background-color: #f2f3f1;
+}
+@media screen and (min-width: 767px) {
+  #ilAll {
+    min-width: calc(100% - 66px);
+  }
+}
+@media screen and (max-width: 767px) {
+  #ilAll {
+    min-width: 100%;
+  }
 }
 .ilTopTitle {
   position: absolute;
   top: 25px;
-  left: 15px;
+  left: 0px;
   font-size: 20pt;
-  font-family: "times new roman";
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 0 0 18px;
 }
 .ilTopSubtitle {
   position: absolute;
   top: 66px;
-  left: 32px;
+  left: 18px;
   font-family: helvetica, arial;
 }
 footer.ilFooter {
-  background-color: #014999;
+  background-color: #004a99;
   height: 30px;
   padding: 2px 0 0 15px;
   font-family: "arial";
@@ -11288,10 +11345,13 @@ footer.ilFooter {
   margin: -38px 0 0 2px;
 }
 #ilTopNav.navbar-default {
-  background-color: #e1e2dd;
-  left: 1px;
+  background-color: #e0e1dd;
+  left: -3px;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 4px;
+}
+#ilTopNav.navbar > .navbar-collapse {
+  padding: 0 0 0 4px;
 }
 #ilTopNav .navbar-nav > li {
   margin: 0;
@@ -11300,7 +11360,7 @@ footer.ilFooter {
   border-top: 0px;
   padding: 0 10px 0 10px;
   font-size: 8pt;
-  color: #000000;
+  color: #363534;
   border-right: 1px solid grey;
   margin: 0;
 }
@@ -11308,7 +11368,7 @@ footer.ilFooter {
   display: none;
 }
 #ilTopBarNav > li > a {
-  background-color: rgba(86, 129, 184, 0.6);
+  background-color: #2a6ebb;
 }
 .ilContainerWidth {
   padding: 0 15px 0 15px;
@@ -11324,6 +11384,9 @@ a.ilTreeView {
   width: 0px;
   box-shadow: none;
   border: none;
+}
+a.ilTreeView > img {
+  background-color: #e0e1dd;
 }
 .ilLeftNav {
   margin-left: 0;
@@ -11347,4 +11410,69 @@ a#imgtree {
 }
 div#minheight {
   height: 0;
+}
+/* Container Title */
+h1.media-heading,
+h1.ilHeader {
+  color: #363534 !important;
+  font-family: "Times New Roman", Times, serif;
+}
+a#il_mhead_t_focus {
+  color: #363534 !important;
+}
+/* Green new Object Button */
+.btn-primary {
+  background-color: #739600;
+  border-color: #739600;
+}
+/* Action Button */
+.btn-default {
+  background-color: #2a6ebb;
+  border-color: #2a6ebb;
+}
+/* Bread Crumb */
+ol.breadcrumb {
+  font-size: 13px;
+  font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+}
+/* Links */
+a {
+  color: #2a6ebb;
+}
+/* Tree Icon */
+a#imgtree {
+  position: absolute;
+  top: 93px;
+  left: -10px;
+}
+a.ilTreeView > img {
+  height: 27px;
+}
+a.ilTreeView:hover > img,
+a.ilTreeView:active > img,
+a.ilTreeView:focus > img {
+  margin-left: 8px;
+  left: 0px;
+}
+/* margin Left, right */
+.row {
+  margin-left: -12px;
+  margin-right: -17px;
+}
+/* Tabs */
+#ilTab.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+#ilTab.nav-tabs > li.active > a:focus {
+  background-color: #004a99;
+}
+#ilTab {
+  border-color: -moz-use-text-color -moz-use-text-color #004a99;
+}
+#ilTab {
+  border-bottom: 2px solid #004a99;
+}
+#ilTab.nav > li > a:hover,
+#ilTab.nav > li > a:focus {
+  color: #fff;
+  background-color: #2a6ebb;
 }

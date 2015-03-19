@@ -1,13 +1,21 @@
 @import "../../../../templates/default/delos.less";
 @import "variables.less";
 
+
 /* Uni Freiburg 5.x ILIAS Skin */
 
-@mainmenu-color: #E1E2DD;
-@unifr-blue: #014999;
-@background-gray: #f0f0f0;
-@navbar-gray: #E1E2DD;
-@topbarnav-lightblue: rgba(86, 129, 184, 0.6);
+/**
+ Colors: http://www.zuv.uni-freiburg.de/service/wsg/webstyleguide/farben
+*/
+@unifr_blue: #004a99; //blue-1 (Uni-Blau)
+@background_grey: #f2f3f1; //grey-0
+@navbar_background_grey: #e0e1dd; //grey-1
+@topbarnav_lightblue: #2a6ebb; //blue-2
+@navbar_background_hover: #2a6ebb; //blue-2
+@grey_font: #363534; //grey-font
+@link_font: #2a6ebb; //blue-2
+@button_blue: #2a6ebb; //blue-2
+@button_green: #739600; //Mittel-Grün
 
 #overallContainer {
   overflow: hidden;
@@ -15,53 +23,93 @@
 }
 
 body.std {
-  background-color: #FFFFFF;
-
+  background-color: #ffffff;
 }
 
-#leftBanner {
-  background-color: #ffffff;
-  background-image: url(images/unilogo-200x66.gif);
-  background-repeat: no-repeat;
-  width: 66px;
-  margin-bottom: -15000px;
-  padding-bottom: 15000px;
+@media screen and (min-width: 767px) {
+  #leftBanner {
+	background-color: #ffffff;
+	background-image: url(images/unilogo-200x66.gif);
+	background-repeat: no-repeat;
+	width: 66px;
+	margin-bottom: -15000px;
+	padding-bottom: 15000px;
+  }
+}
+
+#ilTopNav button.navbar-toggle {
+  left: 18px;
+  top: -74px;
+  background-color: @topbarnav_lightblue;
+  position: absolute;
 }
 
 #ilTopBar.ilTopBar {
   position: static;
-  background-color: @unifr-blue;
+  background-color: @unifr_blue;
   height: 88px;
   z-index: 2;
+}
+
+#ilTopBarNav {
+  margin: 20px 14px 0 0;
 }
 
 #ilTopNav.navbar {
   min-height: 27px;
 }
 
+#ilTopNav .navbar-nav {
+  padding-left: 0px !important;
+}
+
 #ilTopBarNav .dropdown-menu a {
-  color: #2C2828;
+  color: @grey_font;
 }
 
 #ilTopBarNav .dropdown-menu a:hover {
-  background-color: #AEAEAE;
-  color: #F9F9F9;
+  background-color: @navbar_background_hover;
+  color: @grey_font;
 }
 
 #ilTopBarNav .dropdown-menu {
-  background-color: #F9F9F9;
+  background-color: @navbar_background_grey;
 }
 
 #ilTopBarNav .dropdown-menu #ilMMSearchMenu a {
-  color: #2C2828;
+  color: @grey_font;
+}
+
+.dropdown-menu {
+  background-color: @navbar_background_grey;
+}
+
+.dropdown-header {
+  font-size: 14px;
+  background-color: @navbar_background_grey;
+  font-weight: bold;
+}
+
+#ilTopNav .navbar-nav > .active > a, #ilTopNav .navbar-nav > .open > a, #ilTopNav .navbar-nav > .active > a:hover, #ilTopNav .navbar-nav > .open > a:hover, #ilTopNav .navbar-nav > .active > a:active, #ilTopNav .navbar-nav > .open > a:active, #ilTopNav .navbar-nav > .active > a:focus, #ilTopNav .navbar-nav > .open > a:focus {
+  background-color: @navbar_background_grey;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus {
+  background-color: @navbar_background_hover;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: @navbar_background_hover;
+  color: #ffffff;
 }
 
 #ilMMSearchMenu p {
-  color: #2C2828;
+  color: @grey_font;
 }
 
 #ilTopNav .navbar-nav {
-  padding-left: 15px;
+  padding-left: 18px;
   margin: 2px 5px 0 0;
   font-family: "arial";
   font-size: 12;
@@ -91,27 +139,40 @@ body.std {
 #ilAll {
   overflow: hidden;
   position:absolute;
-  min-width: calc(~'100% - 66px');
-  background-color: @background-gray;
+  background-color: @background_grey;
 }
+
+@media screen and (min-width: 767px) {
+  #ilAll {
+	min-width: calc(~'100% - 66px');
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ilAll {
+	min-width: 100%;
+  }
+}
+
 
 .ilTopTitle {
   position: absolute;
   top: 25px;
-  left: 15px;
+  left: 0px;
   font-size: 20pt;
-  font-family: "times new roman";
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 0 0 18px;
 }
 
 .ilTopSubtitle {
   position: absolute;
   top: 66px;
-  left: 32px;
+  left: 18px;
   font-family: helvetica, arial;
 }
 
 footer.ilFooter {
-  background-color: @unifr-blue;
+  background-color: @unifr_blue;
   height: 30px;
   padding: 2px 0 0 15px;
   font-family: "arial";
@@ -122,10 +183,14 @@ footer.ilFooter {
 }
 
 #ilTopNav.navbar-default {
-  background-color: @navbar-gray;
-  left: 1px;
+  background-color: @navbar_background_grey;
+  left: -3px;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 4px;
+}
+
+#ilTopNav.navbar > .navbar-collapse {
+  padding: 0 0 0 4px;
 }
 
 #ilTopNav .navbar-nav > li {
@@ -136,7 +201,7 @@ footer.ilFooter {
   border-top: 0px;
   padding: 0 10px 0 10px;
   font-size: 8pt;
-  color: #000000;
+  color: @grey_font;
   border-right: 1px solid grey;
   margin: 0;
 }
@@ -146,7 +211,7 @@ footer.ilFooter {
 }
 
 #ilTopBarNav > li > a {
-  background-color: @topbarnav-lightblue;
+  background-color: @topbarnav_lightblue;
 }
 
 .ilContainerWidth {
@@ -166,6 +231,10 @@ a.ilTreeView {
   width: 0px;
   box-shadow: none;
   border: none;
+}
+
+a.ilTreeView > img {
+  background-color: @navbar_background_grey;
 }
 
 .ilLeftNav {
@@ -195,4 +264,75 @@ a#imgtree {
 
 div#minheight {
   height: 0;
+}
+
+/* Container Title */
+h1.media-heading, h1.ilHeader {
+  color: @grey_font !important;
+  font-family: "Times New Roman", Times, serif;
+}
+a#il_mhead_t_focus  {
+  color: @grey_font !important;
+}
+
+/* Green new Object Button */
+.btn-primary {
+  background-color: @button_green;
+  border-color: @button_green;
+}
+
+/* Action Button */
+.btn-default {
+  background-color: @button_blue;
+  border-color: @button_blue;
+}
+
+/* Bread Crumb */
+ol.breadcrumb {
+  font-size: 13px;
+  font-family: 'Open Sans',Verdana,Arial,Helvetica,sans-serif;
+}
+
+/* Links */
+a {
+  color: @link_font;
+}
+
+/* Tree Icon */
+a#imgtree {
+  position: absolute;
+  top: 93px;
+  left: -10px;
+}
+
+a.ilTreeView > img {
+  height: 27px;
+}
+
+a.ilTreeView:hover > img, a.ilTreeView:active > img, a.ilTreeView:focus > img {
+  margin-left: 8px;
+  left: 0px;
+}
+
+/* margin Left, right */
+.row {
+  margin-left: -12px;
+  margin-right: -17px;
+}
+
+/* Tabs */
+#ilTab.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, #ilTab.nav-tabs > li.active > a:focus {
+	background-color: @unifr_blue;
+}
+
+#ilTab {
+  border-color: -moz-use-text-color -moz-use-text-color @unifr_blue;
+}
+
+#ilTab {
+  border-bottom: 2px solid @unifr_blue;
+}
+#ilTab.nav > li > a:hover, #ilTab.nav > li > a:focus {
+  color: #fff;
+  background-color: @navbar_background_hover;
 }
