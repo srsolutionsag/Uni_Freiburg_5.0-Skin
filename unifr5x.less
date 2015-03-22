@@ -17,50 +17,200 @@
 @button_blue: #2a6ebb; //blue-2
 @button_green: #739600; //Mittel-Grün
 
-#overallContainer {
-  /*overflow: hidden;
-  min-height: 100%;*/
-}
-
-body.std {
-  background-color: #ffffff;
-}
-
+/* Left Banner, Content normal */
 @media screen and (min-width: 767px) {
-  #leftBanner {
+  #unifrLeftBanner {
 	background-color: #fff;
-	height: 200px;
 	background-image: url(images/unilogo-200x66.gif);
 	background-repeat: no-repeat;
 	width: 66px;
 	z-index: 10;
+	height: 100%;
+	position: fixed;
   }
+
+  .ilTopFixed {
+	left: 66px;
+  }
+
+  #unifrContent {
+	left: 66px;
+	top: 112px;
+	height: calc(~'100% - 112px');
+  }
+
+  #ilTopNav {
+	margin: -38px 0 0 0px;
+  }
+
+  #ilTopNav.navbar {
+	min-height: 22px;
+  }
+
+
 }
 
+/* no left Banner, Content responsive */
+@media screen and (max-width: 767px) {
+  .ilTopFixed {
+	left:0px;
+  }
+
+  #unifrContent {
+	left: 0px;
+	top: 46px;
+	height: calc(~'100% - 86px');
+  }
+
+  .ilMainHeader,
+  .ilMainHeader.ilTopFixed {
+	display: none;
+  }
+
+  #ilTopNav {
+	margin: -45px 0 0 0px;
+  }
+
+  #ilTopNav.navbar {
+	height: 0px;
+  }
+
+}
+
+/* Responsive MainMenu Button */
 #ilTopNav button.navbar-toggle {
-  left: 18px;
-  top: -73px;
   background-color: @topbarnav_lightblue;
+  left: 17px;
+  top: 20px;
+}
+
+/* ILIAS Content */
+#unifrContent {
   position: absolute;
+  right: 0px;
+
+}
+
+#ilAll {
+  background-color: @background_grey;
+}
+
+/**
+* ILIAS Head
+*/
+.ilMainHeader,
+.ilMainHeader.ilTopFixed {
+  background-image: url(images/red_stroke.jpg);
+  background-repeat: no-repeat;
+  height: 8px;
+  top: 86px;
+  border-bottom: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.ilFixedTopSpacer {
+  margin-left: auto;
+  margin-right: auto;
+  right: 0px;
 }
 
 #ilTopBar.ilTopBar {
-  position: static;
   background-color: @unifr_blue;
-  height: 88px;
-  z-index: 2;
+  height: 86px;
 }
 
-#ilTopBarNav {
-  margin: 20px 14px 0 0;
+.ilTopTitle {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  font-size: 20pt;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 0 0 18px;
 }
 
-#ilTopNav.navbar {
-  min-height: 27px;
+.ilTopSubtitle {
+  position: absolute;
+  top: 66px;
+  left: 18px;
+  font-family: helvetica, arial;
 }
 
-#ilTopNav .navbar-nav {
-  padding-left: 0px !important;
+/**
+* MainMenu
+*/
+.ilMainMenu.ilTopFixed {
+  top: 130px;
+}
+
+
+
+#ilTopNav .navbar-nav > .open > a:focus {
+  border-top: none;
+}
+
+#ilTopNav .navbar-nav > li.open > a {
+  border-top:none;
+}
+
+
+
+
+#ilTopNav.navbar > .navbar-collapse {
+  padding: 0 0 0 4px;
+}
+
+#ilTopNav .navbar-nav > li {
+  margin: 0;
+}
+
+#ilTopNav .navbar-nav > li > a {
+  border-top: 0px;
+  padding: 0 10px 0 10px;
+  font-size: 8pt;
+  color: @grey_font;
+  border-right: 1px solid grey;
+  margin: 0;
+}
+
+#ilTopNav.navbar-default, .navbar-collapse {
+  background-color: @navbar_background_grey;
+}
+
+#ilTopNav .navbar-nav > .active > a, #ilTopNav .navbar-nav > .open > a, #ilTopNav .navbar-nav > .active > a:hover, #ilTopNav .navbar-nav > .open > a:hover, #ilTopNav .navbar-nav > .active > a:active, #ilTopNav .navbar-nav > .open > a:active, #ilTopNav .navbar-nav > .active > a:focus, #ilTopNav .navbar-nav > .open > a:focus {
+  background-color: @navbar_background_grey;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: @navbar_background_hover;
+  color: #ffffff;
+}
+
+/**
+* Dropdown Menu
+*/
+.dropdown-menu {
+  background-color: @navbar_background_grey;
+  z-index: 0;
+}
+
+.dropdown-header {
+  font-size: 14px;
+  background-color: @navbar_background_grey;
+  font-weight: bold;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus {
+  background-color: @navbar_background_hover;
+  color: #ffffff;
+}
+
+/**
+* User Setting Buttons
+*/
+#ilTopBarNav > li > a {
+  background-color: @topbarnav_lightblue;
+  top: 20px;
 }
 
 #ilTopBarNav .dropdown-menu a {
@@ -80,255 +230,93 @@ body.std {
   color: @grey_font;
 }
 
-.dropdown-menu {
-  background-color: @navbar_background_grey;
-}
-
-.dropdown-header {
-  font-size: 14px;
-  background-color: @navbar_background_grey;
-  font-weight: bold;
-}
-
-#ilTopNav .navbar-nav > .active > a, #ilTopNav .navbar-nav > .open > a, #ilTopNav .navbar-nav > .active > a:hover, #ilTopNav .navbar-nav > .open > a:hover, #ilTopNav .navbar-nav > .active > a:active, #ilTopNav .navbar-nav > .open > a:active, #ilTopNav .navbar-nav > .active > a:focus, #ilTopNav .navbar-nav > .open > a:focus {
-  background-color: @navbar_background_grey;
-}
-
-.dropdown-menu li > a:hover, .dropdown-menu li > a:focus {
-  background-color: @navbar_background_hover;
-  color: #ffffff;
-}
-
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-  background-color: @navbar_background_hover;
-  color: #ffffff;
-}
-
 #ilMMSearchMenu p {
   color: @grey_font;
 }
 
-#ilTopNav .navbar-nav {
-  padding-left: 18px;
-  margin: 2px 5px 0 0;
-  font-family: "arial";
-  font-size: 12;
-}
-
+/**
+* Do not Display ILIAS Logo
+*/
 .ilMainHeader > header > .row > a.navbar-brand {
   display: none;
   height: 0px;
   width: 0px;
 }
 
-.ilMainHeader,
-.ilMainHeader.ilTopFixed {
-  background-image: url(images/red_stroke.jpg);
-  background-repeat: no-repeat;
-  height: 8px;
-  position: static;
-}
-
-.ilMainMenu.ilTopFixed {
-  top: 131px;
-  position: absolute;
-  height: 0;
-  z-index: 1;
-}
-
-#ilAll {
-  /*overflow: hidden;*/
-  position:absolute;
-  background-color: @background_grey;
-}
-
-
-@media screen and (min-width: 767px) {
-  #ilAll {
-	min-width: calc(~'100% - 70px');
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #ilAll {
-	min-width: 100%;
-  }
-}
-
-
-.ilTopTitle {
-  position: absolute;
-  top: 25px;
-  left: 0px;
-  font-size: 20pt;
-  font-family: "Times New Roman", Times, serif;
-  padding: 0 0 0 18px;
-}
-
-.ilTopSubtitle {
-  position: absolute;
-  top: 66px;
-  left: 18px;
-  font-family: helvetica, arial;
-}
-
-footer.ilFooter {
-  background-color: @unifr_blue;
-  height: 30px;
-  height: 30px;
-  padding: 2px 0 0 15px;
-}
-
-#ilTopNav {
-  margin: -38px 0 0 2px;
-}
-
-#ilTopNav.navbar-default {
-  background-color: @navbar_background_grey;
-  left: -3px;
-  margin-left: 0;
-  padding-left: 4px;
-}
-
-#ilTopNav.navbar > .navbar-collapse {
-  padding: 0 0 0 4px;
-}
-
-#ilTopNav .navbar-nav > li {
-  margin: 0;
-}
-
-#ilTopNav .navbar-nav > li > a {
-  border-top: 0px;
-  padding: 0 10px 0 10px;
-  font-size: 8pt;
-  color: @grey_font;
-  border-right: 1px solid grey;
-  margin: 0;
-}
-
-#ilTopNav .navbar-nav > li > a > span {
-  display: none;
-}
-
-#ilTopBarNav > li > a {
-  background-color: @topbarnav_lightblue;
-}
-
-.ilContainerWidth {
-  padding: 0 15px 0 15px;
-  max-width: none;
-}
-
-#mainscrolldiv {
-  padding-top: 25px;
-}
-
-#mainspacekeeper {
-  margin: 0 0 20px 0;
-}
-
-/* Tree Icon */
-a.ilTreeView {
-  width: 0px;
-  box-shadow: none;
-  border: none;
-}
-
-
-a.ilTreeView > img {
-  background-color: @navbar_background_grey;
-  height: 27px;
-}
-
-a#imgtree {
-  position: absolute;
-  top: 93px;
-  left: -10px;
-  clip: rect(0px 28px  28px  10px );
-}
-
-a#imgtree:hover, a#imgtree:active, a#imgtree:focus {
-  position: absolute;
-  top: 93px;
-  left: 0px;
-  clip: rect(0px 28px  28px  0px );
-}
-
-
-
-.ilLeftNav {
-  position: absolute;
-  margin-left: -2px;
-  top: 24px;
-  z-index: 0;
-  background-color: @background_grey;
-  border-right: 1px solid #808080;
-}
-
-#treeViewContainer {
-  background-color: @background_grey;
-}
-
-
-#ilAdvSelListAnchorText_socialbm_actions {
-  display:none;
-}
-
-#ilTopNav .navbar-nav > .open > a:focus {
-  border-top: none;
-}
-
-#ilTopNav .navbar-nav > li.open > a {
-  border-top:none;
-}
-
-div#minheight {
-  height: 0;
-}
-
-/* Container Title */
-h1.media-heading, h1.ilHeader {
-  color: @grey_font !important;
-  font-family: "Times New Roman", Times, serif;
-}
-a#il_mhead_t_focus  {
-  color: @grey_font !important;
-}
-
-/* Green new Object Button */
-.btn-primary {
-  background-color: @button_green;
-  border-color: @button_green;
-}
-
-/* Action Button */
-.btn-default {
-  background-color: @button_blue;
-  border-color: @button_blue;
-}
-
-/* Bread Crumb */
+/**
+* Breadcrumb
+*/
 ol.breadcrumb {
   font-size: 13px;
   font-family: 'Open Sans',Verdana,Arial,Helvetica,sans-serif;
 }
 
-/* Links */
-a {
-  color: @link_font;
+/* Tree */
+a.ilTreeView {
+  left: 66px;
+  border: none;
+  background-color: none;
+  box-shadow: none;
+  width: 0px;
 }
 
-
-/* margin Left, right */
-.row {
-  margin-left: -12px;
-  margin-right: -17px;
+a#imgtree {
+  top: 136px;
 }
 
-/* Tabs */
+.ilLeftNav {
+  background-color: @background_grey;
+  border-right: 1px solid #808080;
+  z-index: 0;
+  width: 295px;
+  margin-left: 0px;
+  top: 114px;
+}
+
+/* Repository Content */
+.ilContainerWidth {
+  max-width: 100% !important;
+  right: 0px;
+  padding: 0 15px;
+}
+
+/* Background Color Body */
+body.std {
+  background-color: #ffffff;
+}
+
+#ilTopNav .navbar-nav {
+  font-family: "arial";
+  font-size: 12;
+}
+
+/**
+* Footer
+*/
+footer.ilFooter {
+  background-color: @unifr_blue;
+  height: 30px;
+  padding: 2px 0 0 15px;
+}
+
+/**
+* Buttons
+**/
+.btn-primary {
+  background-color: @button_green;
+  border-color: @button_green;
+}
+
+.btn-default {
+  background-color: @button_blue;
+  border-color: @button_blue;
+}
+
+/**
+* Tabs
+**/
 #ilTab.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, #ilTab.nav-tabs > li.active > a:focus {
-	background-color: @unifr_blue;
+  background-color: @unifr_blue;
 }
 
 #ilTab {
@@ -342,3 +330,25 @@ a {
   color: #fff;
   background-color: @navbar_background_hover;
 }
+
+
+/**
+* Fonts
+**/
+h1.media-heading, h1.ilHeader {
+  color: @grey_font !important;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.jstree a {
+  color: @link_font !important;
+}
+
+a {
+  color: @link_font;
+}
+
+a#il_mhead_t_focus  {
+  color: @grey_font !important;
+}
+
