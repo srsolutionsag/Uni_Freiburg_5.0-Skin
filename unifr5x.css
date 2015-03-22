@@ -11371,7 +11371,7 @@ table.mceToolbar td {
 }
 #ilTopBarNav .dropdown-menu a:hover {
   background-color: #2a6ebb;
-  color: #363534;
+  color: #fff;
 }
 #ilTopBarNav .dropdown-menu {
   background-color: #e0e1dd;
