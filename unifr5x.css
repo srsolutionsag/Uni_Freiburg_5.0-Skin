@@ -11229,12 +11229,16 @@ h3.ilHeader {
 @media screen and (min-width: 767px) {
   #unifrLeftBanner {
     background-color: #fff;
-    background-image: url(images/unifr_campus_col_66x172.png);
-    background-repeat: no-repeat;
     width: 66px;
     z-index: 10;
     height: 100%;
     position: fixed;
+  }
+  #unifrLeftBannerLogo {
+    background-image: url(images/unifr_campus_col_66x172.png);
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 196px;
   }
   .ilTopBar {
     height: 112px;
@@ -11444,7 +11448,7 @@ ol.breadcrumb {
 }
 /* Tree */
 a.ilTreeView {
-  left: 67px;
+  left: 68px;
   border: none;
   background-color: none;
   box-shadow: none;
@@ -11454,6 +11458,7 @@ a.ilTreeView > img {
   background-color: #f2f3f1;
   border-right: none;
   width: 10px;
+  height: 32px;
 }
 a#imgtree {
   top: 160px;
@@ -11462,7 +11467,7 @@ a#imgtree {
   background-color: #f2f3f1;
   border-right: 1px solid #808080;
   z-index: 0;
-  width: 289px;
+  width: 289     px;
   margin-left: 0px;
   top: 114px;
 }
@@ -11540,4 +11545,14 @@ a#il_mhead_t_focus {
 .form-horizontal textarea.form-control,
 .form-horizontal select.form-control {
   max-width: 760px;
+}
+.ilTopMemberView h3 {
+  display: none;
+}
+.ilBodyPrint #unifrLeftBanner {
+  display: none;
+}
+.ilBodyPrint #unifrContent {
+  top: 10px;
+  left: 10px;
 }
