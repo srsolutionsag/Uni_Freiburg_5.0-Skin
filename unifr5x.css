@@ -11556,3 +11556,6 @@ a#il_mhead_t_focus {
   top: 10px;
   left: 10px;
 }
+.ilToolbar.navbar {
+  background-color: #e0e1dd;
+}
