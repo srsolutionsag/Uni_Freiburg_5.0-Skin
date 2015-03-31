@@ -11559,6 +11559,6 @@ a#il_mhead_t_focus {
 .ilToolbar.navbar {
   background-color: #e0e1dd;
 }
-.ilNewObjectSelector {
+div.ilNewObjectSelector {
   padding-right: 0px;
 }
