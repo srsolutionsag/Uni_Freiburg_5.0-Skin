@@ -11458,7 +11458,7 @@ a.ilTreeView > img {
   background-color: #f2f3f1;
   border-right: none;
   width: 10px;
-  height: 32px;
+  height: 38px;
 }
 a#imgtree {
   top: 160px;
@@ -11467,7 +11467,7 @@ a#imgtree {
   background-color: #f2f3f1;
   border-right: 1px solid #808080;
   z-index: 0;
-  width: 289     px;
+  width: 289 px;
   margin-left: 0px;
   top: 114px;
 }
