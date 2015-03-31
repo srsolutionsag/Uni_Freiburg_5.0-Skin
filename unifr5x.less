@@ -17,72 +17,70 @@
 @button_blue: #2a6ebb; //blue-2
 @button_green: #739600; //Mittel-Grün
 
-/* Left Banner, Content normal */
-@media screen and (min-width: 767px) {
-  #unifrLeftBanner {
-	background-color: #fff;
-	background-image: url(images/unilogo-200x66.gif);
-	background-repeat: no-repeat;
-	width: 66px;
-	z-index: 10;
-	height: 100%;
-	position: fixed;
-  }
+//############# Begin: Marko's modifications ##################
 
-  .ilTopFixed {
-	left: 66px;
-  }
+@unifr_orange: #e98300;
+//### default button color
 
-  #unifrContent {
-	left: 66px;
-	top: 112px;
-	height: calc(~'100% - 112px');
-  }
+@button_blue: #004a99; //uni blau
+// @button_blue: #2a6ebb; //blue-2
+// @button_blue: #5781db; //wappen blau
 
-  #ilTopNav {
-	margin: -38px 0 0 0px;
-  }
+//### primary button color (for special buttons)
 
-  #ilTopNav.navbar {
-	min-height: 22px;
-  }
+//@button_green: @unifr_orange;
+//@button_green: #739600; //Mittel-Grün
+@button_green: #92d400; //hell-Grün
+// @button_green: #6EA03C; //ILIAS Button Grün
 
+
+@unifr_red: #c1002a; //uni rot
+
+
+// Change subheading "Status: Offline" to unifr_red
+div.ilHeaderAlert {
+  color: @unifr_red;
+}
+
+#ilTopBar.ilTopBar.ilTopFixed.ilMemberViewMainHeader {
+
+  background-image: none;
+  background-color: @unifr_red;
+  float: right;
+}
+
+
+//global standard warning text color, used to be orange
+@brand-warning: @unifr_red;
+
+//global standard warning text color, used to be orange
+@brand-danger: @unifr_red;
+
+/* make the alert warning message box (delete confirmation etc. better visible ) */
+.alert-warning {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: @unifr_red;
+}
+
+//change background of dropdown menus to lighter grey, i.e. @background_grey
+.dropdown-menu {
+  //   background-color: @navbar_background_grey;
+  background-color: @background_grey;
 
 }
 
-/* no left Banner, Content responsive */
-@media screen and (max-width: 767px) {
-  .ilTopFixed {
-	left:0px;
-  }
+//changed order of entries  btn-primary and btn-default to btn-default -> btn-primary (see below)
 
-  #unifrContent {
-	left: 0px;
-	top: 46px;
-	height: calc(~'100% - 86px');
-  }
+h3.ilHeader {
 
-  .ilMainHeader,
-  .ilMainHeader.ilTopFixed {
-	display: none;
-  }
-
-  #ilTopNav {
-	margin: -45px 0 0 0px;
-  }
-
-  #ilTopNav.navbar {
-	height: 0px;
-  }
-
+  text-transform: none;
 }
 
-/* Responsive MainMenu Button */
-#ilTopNav button.navbar-toggle {
-  background-color: @topbarnav_lightblue;
-  left: 17px;
-  top: 20px;
-}
+
+//############# End Marko's modififcations ###################
+
+
 
 /* ILIAS Content */
 #unifrContent {
@@ -90,6 +88,50 @@
   right: 0px;
 
 }
+
+
+/* Left Banner, Content normal */
+@media screen and (min-width: 767px) {
+  #unifrLeftBanner {
+	background-color: #fff;
+	background-image: url(images/unifr_campus_col_66x172.png);
+	//	background-image: url(images/unilogo-200x66.gif);
+	background-repeat: no-repeat;
+	width: 66px;
+	z-index: 10;
+	height: 100%;
+	position: fixed;
+  }
+  .ilTopBar {
+	height: 112px; //marko
+  }
+
+  .ilTopFixed {
+	left: 66px;
+  }
+
+  #unifrContent {
+	left: 66px;
+	top: 136px; //marko
+	height: calc(~'100% - 136px'); //marko
+  }
+
+  #ilTopNav {
+	margin: -38px 0 0 -2px; //marko
+  }
+
+  #ilTopNav.navbar {
+	min-height: 22px;
+  }
+
+  #ilTopBarNav .dropdown-menu {
+	top: 76px !important;
+  }
+
+}
+
+
+
 
 #ilAll {
   background-color: @background_grey;
@@ -100,10 +142,11 @@
 */
 .ilMainHeader,
 .ilMainHeader.ilTopFixed {
-  background-image: url(images/red_stroke.jpg);
+  background-image: url(images/red_stroke_17x4.png); //marko
+  //  background-image: url(images/red_stroke.jpg);
   background-repeat: no-repeat;
-  height: 8px;
-  top: 86px;
+  height: 4px; //marko
+  top: 112px; //marko
   border-bottom: none;
   margin-left: 0px;
   margin-right: 0px;
@@ -117,36 +160,50 @@
 
 #ilTopBar.ilTopBar {
   background-color: @unifr_blue;
-  height: 86px;
+  background-image: url(images/siegel-55x112.png); //marko
+  background-repeat: no-repeat; //marko
+  height: 112px; //marko
 }
 
 .ilTopTitle {
   position: absolute;
-  top: 25px;
+  top: 29px;
   left: 0px;
   font-size: 20pt;
   font-family: "Times New Roman", Times, serif;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 196px; //marko
 }
 
 .ilTopSubtitle {
   position: absolute;
   top: 66px;
-  left: 18px;
+  //  left: 196px; //marko
+  padding: 0 0 0 196px; //marko
   font-family: helvetica, arial;
 }
+
+
+
+/* Responsive MainMenu Button */
+#ilTopNav button.navbar-toggle {
+  background-color: @topbarnav_lightblue;
+  left: 40px;
+  top: 0px; //marko
+}
+
 
 /**
 * MainMenu
 */
 .ilMainMenu.ilTopFixed {
-  top: 130px;
+  top: 154px;
 }
 
 
 
 #ilTopNav .navbar-nav > .open > a:focus {
   border-top: none;
+ // top: 20px; //MainMenu-Bug
 }
 
 #ilTopNav .navbar-nav > li.open > a {
@@ -157,11 +214,11 @@
 
 
 #ilTopNav.navbar > .navbar-collapse {
-  padding: 0 0 0 4px;
+  padding: 0 0 0 0px;
 }
 
 #ilTopNav .navbar-nav > li {
-  margin: 0;
+  margin: 0px;
 }
 
 #ilTopNav .navbar-nav > li > a {
@@ -186,11 +243,13 @@
   color: #ffffff;
 }
 
+
+
 /**
 * Dropdown Menu
 */
 .dropdown-menu {
-  background-color: @navbar_background_grey;
+  background-color: @background_grey; //marko
 }
 
 .dropdown-header {
@@ -209,11 +268,12 @@
 */
 #ilTopBarNav > li > a {
   background-color: @topbarnav_lightblue;
-  top: 20px;
+  top: 36px;
 }
 
 #ilTopBarNav .dropdown-menu a {
   color: @grey_font;
+  //  top: 76px; //mg1023
 }
 
 #ilTopBarNav .dropdown-menu a:hover {
@@ -232,6 +292,67 @@
 #ilMMSearchMenu p {
   color: @grey_font;
 }
+
+
+/* no left Banner, Content responsive */
+// placed here to be able to switch ilTopBar height responsively
+
+@media screen and (max-width: 767px) {
+
+  #ilTopBar.ilTopBar {
+	background-image: url(images/schema_unifr_marg.png); //marko
+	background-repeat: no-repeat; //marko
+	height: 40px; //marko
+	//  -webkit-box-shadow: 0px 4px -2px gray;
+	//  -moz-box-shadow: 0px 4px -2px gray;
+	//  box-shadow: 0 4px 2px -2px gray;
+  }
+
+  #ilTopBarNav > li > a {
+	background-color: @topbarnav_lightblue;
+	top: 0px;
+  }
+
+  .ilTopFixed {
+	left:0px;
+  }
+
+  .ilMainMenu.ilTopFixed {
+	top: 40px;
+  }
+
+  #ilTopBarNav.dropdown-menu {
+	background-color: @background_grey; //marko
+	top: 40px;
+  }
+
+
+  #unifrContent {
+	left: 0px;
+	top: 0px;
+	height: calc(~'100% - 40px'); //marko
+  }
+
+  .ilMainHeader,
+  .ilMainHeader.ilTopFixed,
+  .ilTopSubtitle,
+  .iltopTitle  {
+	display: none;
+  }
+
+
+
+  #ilTopNav {
+	margin: 0px 0 0 0px;
+  }
+
+  #ilTopNav.navbar {
+	height: 0px;
+  }
+
+}
+
+
 
 /**
 * Do not Display ILIAS Logo
@@ -252,16 +373,23 @@ ol.breadcrumb {
 
 /* Tree */
 a.ilTreeView {
-  left: 66px;
+  left: 67px;
   border: none;
   background-color: none;
   box-shadow: none;
   width: 0px;
 }
 
-a#imgtree {
-  top: 136px;
+a.ilTreeView > img {
+  background-color: @background_grey;
+  border-right: none;
+  width: 10px;
 }
+
+a#imgtree {
+  top: 160px; //marko
+}
+
 
 .ilLeftNav {
   background-color: @background_grey;
@@ -276,7 +404,7 @@ a#imgtree {
 .ilContainerWidth {
   max-width: 100% !important;
   right: 0px;
-  padding: 0 15px;
+  padding: 0 17px; //marko
 }
 
 /* Background Color Body */
@@ -295,20 +423,23 @@ body.std {
 footer.ilFooter {
   background-color: @unifr_blue;
   height: 30px;
-  padding: 2px 0 0 15px;
+  padding: 2px 0 0 17px; //marko
 }
 
 /**
 * Buttons
 **/
-.btn-primary {
-  background-color: @button_green;
-  border-color: @button_green;
-}
+
+//mod_marko changed order of btn definitions for all primary buttons to work
 
 .btn-default {
   background-color: @button_blue;
   border-color: @button_blue;
+}
+
+.btn-primary {
+  background-color: @button_green;
+  border-color: @button_green;
 }
 
 /**
@@ -351,3 +482,8 @@ a#il_mhead_t_focus  {
   color: @grey_font !important;
 }
 
+/* define max form width */
+.form-horizontal input.form-control, .form-horizontal textarea.form-control,
+.form-horizontal select.form-control {
+  max-width: 760px;
+}

@@ -3002,8 +3002,8 @@ fieldset[disabled] .btn-info.active {
 }
 .btn-warning {
   color: #ffffff;
-  background-color: #fa8228;
-  border-color: #f9740f;
+  background-color: #c1002a;
+  border-color: #a80024;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -3011,8 +3011,8 @@ fieldset[disabled] .btn-info.active {
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
   color: #ffffff;
-  background-color: #ea6705;
-  border-color: #c75805;
+  background-color: #8e001f;
+  border-color: #6a0017;
 }
 .btn-warning:active,
 .btn-warning.active,
@@ -3034,17 +3034,17 @@ fieldset[disabled] .btn-warning:active,
 .btn-warning.disabled.active,
 .btn-warning[disabled].active,
 fieldset[disabled] .btn-warning.active {
-  background-color: #fa8228;
-  border-color: #f9740f;
+  background-color: #c1002a;
+  border-color: #a80024;
 }
 .btn-warning .badge {
-  color: #fa8228;
+  color: #c1002a;
   background-color: #ffffff;
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #fa8228;
-  border-color: #f9740f;
+  background-color: #c1002a;
+  border-color: #a80024;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -3052,8 +3052,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #ffffff;
-  background-color: #ea6705;
-  border-color: #c75805;
+  background-color: #8e001f;
+  border-color: #6a0017;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -3075,11 +3075,11 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger.disabled.active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
-  background-color: #fa8228;
-  border-color: #f9740f;
+  background-color: #c1002a;
+  border-color: #a80024;
 }
 .btn-danger .badge {
-  color: #fa8228;
+  color: #c1002a;
   background-color: #ffffff;
 }
 .btn-link {
@@ -4555,18 +4555,18 @@ a.label:focus {
   background-color: #cf9970;
 }
 .label-warning {
-  background-color: #fa8228;
+  background-color: #c1002a;
 }
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-  background-color: #ea6705;
+  background-color: #8e001f;
 }
 .label-danger {
-  background-color: #fa8228;
+  background-color: #c1002a;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #ea6705;
+  background-color: #8e001f;
 }
 .badge {
   display: inline-block;
@@ -4579,7 +4579,7 @@ a.label:focus {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #ea6705;
+  background-color: #8e001f;
   border-radius: 10px;
 }
 .badge:empty {
@@ -4602,7 +4602,7 @@ a.badge:focus {
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
   color: #ffffff;
-  background-color: #ea6705;
+  background-color: #8e001f;
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
@@ -4827,7 +4827,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-warning {
-  background-color: #fa8228;
+  background-color: #c1002a;
 }
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -4835,7 +4835,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger {
-  background-color: #fa8228;
+  background-color: #c1002a;
 }
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6363,7 +6363,7 @@ button.close {
   float: right;
 }
 span.ilAlert {
-  color: #fa8228;
+  color: #c1002a;
 }
 /* Drop Downs */
 .dropdown-menu {
@@ -6920,7 +6920,7 @@ a.il_ItemProperty:hover {
   color: #000;
 }
 span.il_ItemAlertProperty {
-  color: #fa8228;
+  color: #c1002a;
 }
 /* Table Links */
 /* --- description text ---*/
@@ -7011,7 +7011,7 @@ div.ilHeaderAlert {
   font-size: 90%;
   padding: 0;
   font-family: 'Open Sans Light';
-  color: #fa8228;
+  color: #c1002a;
 }
 div.il_HeaderInner {
   padding: 15px 15px;
@@ -8089,7 +8089,7 @@ div.ilc_page_Page > div.il_editarea_disabled {
   padding: 10px;
 }
 div.il_editarea_disabled {
-  border: 2px dotted #fa8228;
+  border: 2px dotted #c1002a;
 }
 div.il_editarea_active {
   border: 1px solid #909090;
@@ -8098,7 +8098,7 @@ div.il_editarea_selected {
   border: 2px solid #6ea03c;
 }
 div.il_editarea_disabled_selected {
-  border: 2px solid #fa8228;
+  border: 2px solid #c1002a;
 }
 div.il_editarea_active_selected {
   border: 2px solid #000;
@@ -8313,7 +8313,7 @@ div.ilEditModified {
   border-color: #4c6586;
 }
 div.ilEditDeleted {
-  border-color: #fa8228;
+  border-color: #c1002a;
 }
 div.ilEditNew {
   border-color: #6ea03c;
@@ -8324,7 +8324,7 @@ div.ilEditNew {
   padding: 2px;
 }
 span.ilDiffDel {
-  background-color: #fdd9be;
+  background-color: #ff5b7f;
 }
 span.ilDiffIns {
   background-color: #bbda9b;
@@ -10678,7 +10678,7 @@ div.ilRatingOverlay {
   min-width: 30px;
 }
 span.ilNewsRssIcon {
-  background-color: #ea6705;
+  background-color: #8e001f;
   color: #ffffff;
   min-width: 36px;
   font-size: 10px;
@@ -10688,7 +10688,7 @@ span.ilNewsRssIcon {
 }
 span.ilNewsRssIcon:hover {
   text-decoration: none;
-  background-color: #b85104;
+  background-color: #5b0014;
 }
 div.ilSurveyPageEditDropArea {
   border-color: #88be51;
@@ -10756,7 +10756,7 @@ a.ilTag:active {
   background-color: #b0b0b0;
 }
 .ilTag.ilHighlighted {
-  background-color: #ea6705;
+  background-color: #8e001f;
 }
 /* Services/UIComponent/Checklist */
 div.ilChecklist ul {
@@ -11200,63 +11200,62 @@ table.mceToolbar td {
 /**
  Colors: http://www.zuv.uni-freiburg.de/service/wsg/webstyleguide/farben
 */
+div.ilHeaderAlert {
+  color: #c1002a;
+}
+#ilTopBar.ilTopBar.ilTopFixed.ilMemberViewMainHeader {
+  background-image: none;
+  background-color: #c1002a;
+  float: right;
+}
+/* make the alert warning message box (delete confirmation etc. better visible ) */
+.alert-warning {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #c1002a;
+}
+.dropdown-menu {
+  background-color: #f2f3f1;
+}
+h3.ilHeader {
+  text-transform: none;
+}
+/* ILIAS Content */
+#unifrContent {
+  position: absolute;
+  right: 0px;
+}
 /* Left Banner, Content normal */
 @media screen and (min-width: 767px) {
   #unifrLeftBanner {
     background-color: #fff;
-    background-image: url(images/unilogo-200x66.gif);
+    background-image: url(images/unifr_campus_col_66x172.png);
     background-repeat: no-repeat;
     width: 66px;
     z-index: 10;
     height: 100%;
     position: fixed;
   }
+  .ilTopBar {
+    height: 112px;
+  }
   .ilTopFixed {
     left: 66px;
   }
   #unifrContent {
     left: 66px;
-    top: 112px;
-    height: calc(100% - 112px);
+    top: 136px;
+    height: calc(100% - 136px);
   }
   #ilTopNav {
-    margin: -38px 0 0 0px;
+    margin: -38px 0 0 -2px;
   }
   #ilTopNav.navbar {
     min-height: 22px;
   }
-}
-/* no left Banner, Content responsive */
-@media screen and (max-width: 767px) {
-  .ilTopFixed {
-    left: 0px;
+  #ilTopBarNav .dropdown-menu {
+    top: 76px !important;
   }
-  #unifrContent {
-    left: 0px;
-    top: 46px;
-    height: calc(100% - 86px);
-  }
-  .ilMainHeader,
-  .ilMainHeader.ilTopFixed {
-    display: none;
-  }
-  #ilTopNav {
-    margin: -45px 0 0 0px;
-  }
-  #ilTopNav.navbar {
-    height: 0px;
-  }
-}
-/* Responsive MainMenu Button */
-#ilTopNav button.navbar-toggle {
-  background-color: #2a6ebb;
-  left: 17px;
-  top: 20px;
-}
-/* ILIAS Content */
-#unifrContent {
-  position: absolute;
-  right: 0px;
 }
 #ilAll {
   background-color: #f2f3f1;
@@ -11266,10 +11265,10 @@ table.mceToolbar td {
 */
 .ilMainHeader,
 .ilMainHeader.ilTopFixed {
-  background-image: url(images/red_stroke.jpg);
+  background-image: url(images/red_stroke_17x4.png);
   background-repeat: no-repeat;
-  height: 8px;
-  top: 86px;
+  height: 4px;
+  top: 112px;
   border-bottom: none;
   margin-left: 0px;
   margin-right: 0px;
@@ -11281,27 +11280,35 @@ table.mceToolbar td {
 }
 #ilTopBar.ilTopBar {
   background-color: #004a99;
-  height: 86px;
+  background-image: url(images/siegel-55x112.png);
+  background-repeat: no-repeat;
+  height: 112px;
 }
 .ilTopTitle {
   position: absolute;
-  top: 25px;
+  top: 29px;
   left: 0px;
   font-size: 20pt;
   font-family: "Times New Roman", Times, serif;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 196px;
 }
 .ilTopSubtitle {
   position: absolute;
   top: 66px;
-  left: 18px;
+  padding: 0 0 0 196px;
   font-family: helvetica, arial;
+}
+/* Responsive MainMenu Button */
+#ilTopNav button.navbar-toggle {
+  background-color: #2a6ebb;
+  left: 40px;
+  top: 0px;
 }
 /**
 * MainMenu
 */
 .ilMainMenu.ilTopFixed {
-  top: 130px;
+  top: 154px;
 }
 #ilTopNav .navbar-nav > .open > a:focus {
   border-top: none;
@@ -11310,10 +11317,10 @@ table.mceToolbar td {
   border-top: none;
 }
 #ilTopNav.navbar > .navbar-collapse {
-  padding: 0 0 0 4px;
+  padding: 0 0 0 0px;
 }
 #ilTopNav .navbar-nav > li {
-  margin: 0;
+  margin: 0px;
 }
 #ilTopNav .navbar-nav > li > a {
   border-top: 0px;
@@ -11346,7 +11353,7 @@ table.mceToolbar td {
 * Dropdown Menu
 */
 .dropdown-menu {
-  background-color: #e0e1dd;
+  background-color: #f2f3f1;
 }
 .dropdown-header {
   font-size: 14px;
@@ -11363,7 +11370,7 @@ table.mceToolbar td {
 */
 #ilTopBarNav > li > a {
   background-color: #2a6ebb;
-  top: 20px;
+  top: 36px;
 }
 #ilTopBarNav .dropdown-menu a {
   color: #363534;
@@ -11380,6 +11387,45 @@ table.mceToolbar td {
 }
 #ilMMSearchMenu p {
   color: #363534;
+}
+/* no left Banner, Content responsive */
+@media screen and (max-width: 767px) {
+  #ilTopBar.ilTopBar {
+    background-image: url(images/schema_unifr_marg.png);
+    background-repeat: no-repeat;
+    height: 40px;
+  }
+  #ilTopBarNav > li > a {
+    background-color: #2a6ebb;
+    top: 0px;
+  }
+  .ilTopFixed {
+    left: 0px;
+  }
+  .ilMainMenu.ilTopFixed {
+    top: 40px;
+  }
+  #ilTopBarNav.dropdown-menu {
+    background-color: #f2f3f1;
+    top: 40px;
+  }
+  #unifrContent {
+    left: 0px;
+    top: 0px;
+    height: calc(100% - 40px);
+  }
+  .ilMainHeader,
+  .ilMainHeader.ilTopFixed,
+  .ilTopSubtitle,
+  .iltopTitle {
+    display: none;
+  }
+  #ilTopNav {
+    margin: 0px 0 0 0px;
+  }
+  #ilTopNav.navbar {
+    height: 0px;
+  }
 }
 /**
 * Do not Display ILIAS Logo
@@ -11398,14 +11444,19 @@ ol.breadcrumb {
 }
 /* Tree */
 a.ilTreeView {
-  left: 66px;
+  left: 67px;
   border: none;
   background-color: none;
   box-shadow: none;
   width: 0px;
 }
+a.ilTreeView > img {
+  background-color: #f2f3f1;
+  border-right: none;
+  width: 10px;
+}
 a#imgtree {
-  top: 136px;
+  top: 160px;
 }
 .ilLeftNav {
   background-color: #f2f3f1;
@@ -11419,7 +11470,7 @@ a#imgtree {
 .ilContainerWidth {
   max-width: 100% !important;
   right: 0px;
-  padding: 0 15px;
+  padding: 0 17px;
 }
 /* Background Color Body */
 body.std {
@@ -11435,18 +11486,18 @@ body.std {
 footer.ilFooter {
   background-color: #004a99;
   height: 30px;
-  padding: 2px 0 0 15px;
+  padding: 2px 0 0 17px;
 }
 /**
 * Buttons
 **/
-.btn-primary {
-  background-color: #739600;
-  border-color: #739600;
-}
 .btn-default {
-  background-color: #2a6ebb;
-  border-color: #2a6ebb;
+  background-color: #004a99;
+  border-color: #004a99;
+}
+.btn-primary {
+  background-color: #92d400;
+  border-color: #92d400;
 }
 /**
 * Tabs
@@ -11483,4 +11534,10 @@ a {
 }
 a#il_mhead_t_focus {
   color: #363534 !important;
+}
+/* define max form width */
+.form-horizontal input.form-control,
+.form-horizontal textarea.form-control,
+.form-horizontal select.form-control {
+  max-width: 760px;
 }
