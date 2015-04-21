@@ -7492,6 +7492,10 @@ div.ilSideBarContent {
   height: 0px;
   display: none;
 }
+.il_VAccordionContentDef > div,
+.il_HAccordionContentDef > div {
+  overflow: auto;
+}
 /* Modules/ScormAicc */
 table.il_ScormTable {
   color: #222;
@@ -7920,6 +7924,7 @@ blockquote.ilForumQuote {
   margin: 0 20px 10px;
   padding: 5px;
   border: 1px solid #B6B6B6;
+  font-size: 90%;
 }
 div.ilForumQuoteHead {
   font-weight: bold;
@@ -9748,7 +9753,6 @@ div.ilPreconditionItem {
 div.ilContainerListItemOuter {
   padding: 15px 10px;
   zoom: 1;
-  width: 100%;
   /* background-color: lighten(@mid-gray, 75%); */
 
 }
@@ -9901,6 +9905,12 @@ div#ilContRepIntro img {
 /* Modules/LearningModule */
 .ilLMMenu {
   clear: both;
+}
+body.ilLMNoMenu .ilFixedTopSpacer {
+  padding-top: 0px;
+}
+body.ilLMNoMenu .ilLeftNav {
+  top: 0px;
 }
 button.ilAreaClose {
   width: 20px;
@@ -10920,7 +10930,7 @@ table.mceToolbar td {
    Google recommending 640px: https://developers.google.com/webmasters/smartphone-sites/details
    
    */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   html {
     -webkit-text-size-adjust: none;
   }
@@ -11208,6 +11218,14 @@ div.ilHeaderAlert {
   background-color: #c1002a;
   float: right;
 }
+div.ilHeaderAlert {
+  color: #c1002a;
+}
+#ilTopBar.ilTopBar.ilTopFixed.ilMemberViewMainHeader {
+  background-image: none;
+  background-color: #c1002a;
+  float: right;
+}
 /* make the alert warning message box (delete confirmation etc. better visible ) */
 .alert-warning {
   background-color: #f2dede;
@@ -11222,8 +11240,9 @@ h3.ilHeader {
 }
 /* ILIAS Content */
 #unifrContent {
-  position: absolute;
   right: 0px;
+  padding-left: 67px;
+  padding-top: 137px;
 }
 /* Left Banner, Content normal */
 @media screen and (min-width: 767px) {

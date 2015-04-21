@@ -39,6 +39,28 @@
 @unifr_red: #c1002a; //uni rot
 
 
+
+// Change subheading "Status: Offline" to unifr_red
+div.ilHeaderAlert {
+  color: @unifr_red;
+}
+
+#ilTopBar.ilTopBar.ilTopFixed.ilMemberViewMainHeader {
+
+  background-image: none;
+  background-color: @unifr_red;
+  float: right;
+}
+
+
+//global standard warning text color, used to be orange
+@brand-warning: @unifr_red;
+
+//global standard warning text color, used to be orange
+@brand-danger: @unifr_red;
+
+
+
 // Change subheading "Status: Offline" to unifr_red
 div.ilHeaderAlert {
   color: @unifr_red;
@@ -86,9 +108,10 @@ h3.ilHeader {
 
 /* ILIAS Content */
 #unifrContent {
-  position: absolute;
+  //position: absolute;
   right: 0px;
-
+  padding-left: 67px;
+  padding-top: 137px;
 }
 
 
@@ -214,7 +237,7 @@ h3.ilHeader {
 
 #ilTopNav .navbar-nav > .open > a:focus {
   border-top: none;
- // top: 20px; //MainMenu-Bug
+  // top: 20px; //MainMenu-Bug
 }
 
 #ilTopNav .navbar-nav > li.open > a {
