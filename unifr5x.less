@@ -39,7 +39,16 @@
 @unifr_red: #c1002a; //uni rot
 
 
+//Tag Colour
+/*
+.ilTag {
+	background-color: #de3831;
+}
+.ilTagRelHigh {
 
+    background-color: #7b2927;
+}
+*/
 // Change subheading "Status: Offline" to unifr_red
 div.ilHeaderAlert {
   color: @unifr_red;
@@ -363,11 +372,15 @@ h3.ilHeader {
   }
 
 
-  #unifrContent {
+#unifrContent {
 	left: 0px;
 	top: 0px;
+ 	right: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
 	height: calc(~'100% - 40px'); //marko
   }
+
 
   .ilMainHeader,
   .ilMainHeader.ilTopFixed,
@@ -403,7 +416,7 @@ h3.ilHeader {
 * Breadcrumb
 */
 ol.breadcrumb {
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Open Sans',Verdana,Arial,Helvetica,sans-serif;
 }
 
@@ -547,3 +560,4 @@ a#il_mhead_t_focus  {
 div.ilNewObjectSelector {
   padding-right: 0px;
 }
+
