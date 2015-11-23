@@ -7910,6 +7910,10 @@ a.ilTreeView:focus {
   width: 20px;
   height: 20px;
 }
+img.il_ExplorerIcon {
+  height: 20px;
+  width: 20px;
+}
 /* Modules/Forum */
 a.postread,
 a.postread:visited {
@@ -10636,6 +10640,9 @@ a.ilSubmitInactive:active {
   border-color: #b0b0b0;
   cursor: default;
 }
+button > .glyphicon {
+  pointer-events: none;
+}
 /* Services/Rating */
 img.ilRatingIcon {
   width: 16px;
@@ -11506,7 +11513,7 @@ a#imgtree {
   z-index: 0;
   width: 289 px;
   margin-left: 0px;
-  top: 114px;
+  top: 140px;
 }
 /* Repository Content */
 .ilContainerWidth {
