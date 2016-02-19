@@ -7455,6 +7455,11 @@ div.ilSideBarContent {
 .ui-menu .ui-menu-item a.ui-state-active {
   background-color: #FF9;
 }
+/* Icon Default */
+img.ilIcon {
+  width: 32px;
+  height: 32px;
+}
 /* Component Imports */
 /* Services/Accordion */
 .il_VAccordionHead,
@@ -7544,6 +7549,10 @@ select.form-control {
 .form-horizontal label {
   color: #4d4d4d;
   font-size: 100%;
+}
+.form-horizontal .control-label + div > span {
+  display: inline-block;
+  padding-top: 4px;
 }
 .form-horizontal .control-label.col-sm-3.il_textarea {
   text-align: left;
@@ -7893,6 +7902,10 @@ a.ilTreeView:focus {
   border: 0;
   width: 20px;
   height: 20px;
+}
+img.il_ExplorerIcon {
+  height: 20px;
+  width: 20px;
 }
 /* Modules/Forum */
 a.postread,
@@ -10584,6 +10597,9 @@ a.ilSubmitInactive:active {
   border-color: #b0b0b0;
   cursor: default;
 }
+button > .glyphicon {
+  pointer-events: none;
+}
 /* Services/Rating */
 img.ilRatingIcon {
   width: 16px;
@@ -10772,6 +10788,14 @@ div.ilChecklist ul li img {
 }
 .ilFileUploadEntryOptions label.control-label {
   padding-top: 3px;
+}
+/* Services/UIComponent/Modal */
+.modal-body .jstree li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modal-body .jstree a {
+  display: inline;
 }
 .noMargin {
   margin: 0;
@@ -11146,6 +11170,9 @@ table.mceToolbar td {
     content: "";
   }
 }
+.checkbox input[type="checkbox"]#item_filter_enabled {
+  margin-left: 0;
+}
 /*		Color scheme
 		Dark BLue: #0f2152;
 		Mid Blue: #4c6586;
@@ -11203,7 +11230,7 @@ h3.ilHeader {
 #unifrContent {
   right: 0px;
   padding-left: 67px;
-  padding-top: 128px;
+  padding-top: 137px;
 }
 /* Left Banner, Content normal */
 @media screen and (min-width: 767px) {
@@ -11452,7 +11479,7 @@ a#imgtree {
   z-index: 0;
   width: 289 px;
   margin-left: 0px;
-  top: 114px;
+  top: 140px;
 }
 /* Repository Content */
 .ilContainerWidth {
@@ -11544,4 +11571,7 @@ a#il_mhead_t_focus {
 }
 div.ilNewObjectSelector {
   padding-right: 0px;
+}
+div.ilBlockRow1 {
+  background-color: white;
 }
