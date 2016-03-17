@@ -10128,7 +10128,7 @@ div#right_area {
   bottom: 0;
   width: 50%;
   right: 0px;
-  top: 85px;
+  top: 117px;
   position: fixed;
   padding: 5px;
   background-color: #F5F5F5;
@@ -10310,6 +10310,18 @@ div.ilCreationFormSection .form-horizontal {
   background-color: #ffffff;
 }
 .ilObjListRow:hover {
+  background-color: #ffffea;
+}
+.table-striped {
+  border-collapse: separate;
+}
+.table-striped > tbody > tr.ilObjListRow > td {
+  background-color: #ffffff;
+}
+.table-striped > tbody > tr.ilObjListRow:hover > td {
+  background-color: #ffffea;
+}
+.table-striped > tbody > tr.ilObjListRow:hover:nth-child(2n+1) > td {
   background-color: #ffffea;
 }
 /* Services/Navigation */
