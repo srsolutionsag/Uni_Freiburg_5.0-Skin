@@ -12044,3 +12044,7 @@ div.ilNewObjectSelector {
 div.ilBlockRow1 {
   background-color: white;
 }
+.ilFrmPostTitle .alert-danger {
+  background-color: inherit !important;
+  border: inherit !important;
+}
